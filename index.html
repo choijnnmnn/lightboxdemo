@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Light Box - Sketch Helper</title>
+  <title>라이트 박스</title>
   <script async src="https://docs.opencv.org/3.4.0/opencv.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
   <style>
@@ -44,12 +44,18 @@
       cursor: pointer;
       font-size: 13px;
     }
+    .flex{display: flex;flex-wrap: wrap;}
+    .w3{width: 300px}
+    .wrap{width: 300px; margin: auto;}
+
+
+    footer{padding: 200px}
   </style>
 </head>
 <body>
   <div id="historyToggle">🕘 히스토리</div>
   <div id="historyPanel"></div>
-  <h1>Light Box</h1>
+  <h1>라이트 박스</h1>
   <p>러프 스케치 이미지 업로드 후 자동 선화 추출</p>
 
   <input type="file" id="upload" accept="image/*" />
@@ -80,6 +86,23 @@
   <div id="palette"></div>
   <img id="hidden-img" src="" style="display: none" crossorigin="anonymous" />
 
+  <h2 class="">(실제 선따기 적용 예시)</h2>
+  <div class="flex"> 
+    <div class="wrap">
+    <img src="ex0.jpeg" class="w3"><br>
+    <p2>적용 전</p2>
+  </div>
+  <div class="wrap"> 
+    <img src="ex1.png" class="w3"><br>
+    <p2>적용 예시1</p2>
+  </div>
+  <div class="wrap"> 
+    <img src="ex2.png" class="w3"><br>
+    <p2>적용 예시2</p2>
+  </div>
+</div>
+<footer>초보 그림러를 위한 보조 툴, 라이트 박스&copy;2025 최종민 모든 권리보유.
+</footer>
   <script>
     let originalImgElement = null;
     let originalImageData = null;
